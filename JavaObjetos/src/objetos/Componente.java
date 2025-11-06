@@ -1,6 +1,6 @@
 package objetos;
 
-public class Componente {
+public abstract class Componente {
 	private String nombre;
 	private String simbolo;
 	private double valor;
@@ -38,6 +38,30 @@ public class Componente {
 	}
 	public void setUnidad(String unidad) {
 		this.unidad = unidad;
+	}
+	public abstract double calcularModulo(double pFcia);
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return super.hashCode();
+	}
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return super.equals(obj);
+	}
+	@Override
+	public String toString() {
+		StringBuffer sb = new StringBuffer("/n/nnombre;");
+		sb.append(this.getNombre());
+		sb.append("/nsimbolo:");
+		sb.append(this.getSimbolo());
+		sb.append("/nvalor:");
+		sb.append(this.getValor());
+		sb.append("/nunidad:");
+		sb.append(this.getUnidad());
+		
+		return sb.toString();
 	}
 	
 	
