@@ -11,8 +11,7 @@ public class Resistor extends Componente {
 	}
 
 	@Override
-	public double calcularModulo(double pFcia) {
-		
+	public double calcularModulo(double pFcia) {		
 		return this.getValor();
 	}
 
